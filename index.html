@@ -11,20 +11,24 @@
     <!-- https://emmet.io/ -->
     <!-- header>h1{Test de menu} -->
     <header>
-      <button> <aria-controls="mainNav"> menu </button>
+      <button>
+        <aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen">
+      menu
+      </button>
+        
+        
       <h1>Test de menu</h1>
-      <nav id="mainNav" x show="MenuIsOpen"
+      <nav id="mainNav" x-show="menuIsOpen">
 
-    </header>
-    <nav id="mainNav" x-show="menuIsOpen">
-      <ul>
+     <ul>
       <li><a href="#">item 1</a></li>
       <li><a href="#">item 2</a></li>
       <li><a href="#">item 3</a></li>
-      </ul>
-    </nav>
+     </ul>
 
-  
+    </nav>
+  </header>
+
     <!-- h2>lorem2^p>lorem -->
     <h2>Lorem, ipsum.</h2>
     <p>
@@ -33,5 +37,19 @@
       nemo aliquid pariatur quam voluptates animi laudantium, aperiam
       consectetur nobis enim.
     </p>
+
+    <ul>
+      <li><a href="cats/index.html">Les Chats</a>
+        <ul>
+          <li><a href ="cats/chat-1.html">chat 1</a></li>
+          <li><a href ="cats/chat-2.html">chat 2</a></li>
+        </ul>
+      </li>
+    <li><a href="dogs/index.html">Les Chiens</a></li>
+    <ul>
+      <li><a href="dogs/chien-1.html">chien 1</a></li>
+      <li><a href="dogs/chien-2.html">chien 2</a></li>
+    </ul>
+    
   </body>
 </html>
